@@ -33,11 +33,8 @@ defmodule AbsintheUploadStandard.MixProject do
 
   defp description do
     """
-    A Plug that adds standard graphql-multipart-request-spec support to Absinthe.
-    Drop it into your pipeline before Absinthe.Plug and standard clients
-    (Apollo, urql, Relay, Flutter) will be able to upload files. Born from
-    the Shiko project (veterinary clinic platform) where we needed reliable
-    image uploads over GraphQL. Transitional package while absinthe_plug#309
+    Standard graphql-multipart-request-spec support for Absinthe uploads.
+    Built by the Shiko team. Transitional package while absinthe_plug#309
     gets merged upstream.
     """
   end
