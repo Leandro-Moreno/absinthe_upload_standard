@@ -7,11 +7,18 @@ defmodule AbsintheUploadStandard do
   This allows standard GraphQL clients (Apollo Client, urql, Relay, Flutter, etc.)
   to upload files through Absinthe without any custom client-side upload links.
 
-  > **Note:** This package is a transitional solution while
-  > [absinthe_plug#309](https://github.com/absinthe-graphql/absinthe_plug/pull/309)
-  > gets reviewed and merged upstream. Once `absinthe_plug` natively supports the
-  > standard spec, this package will no longer be necessary. We'll mark it as
-  > deprecated at that point.
+  ## Why this exists
+
+  This package was born out of [Shiko](https://github.com/Leandro-Moreno), a veterinary
+  clinic management platform. We needed image and document uploads over GraphQL, but
+  standard clients (Apollo, urql, Flutter) wouldn't work because Absinthe uses a custom
+  upload format instead of the widely adopted multipart spec. After working around it
+  with REST endpoints, we decided to fix it properly and sent a
+  [PR to absinthe_plug](https://github.com/absinthe-graphql/absinthe_plug/pull/309).
+
+  > **Note:** This package is a transitional solution while that PR gets reviewed
+  > and merged upstream. Once `absinthe_plug` natively supports the standard spec,
+  > this package will no longer be necessary and will be deprecated.
 
   ## Usage
 

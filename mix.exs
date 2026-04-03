@@ -2,7 +2,7 @@ defmodule AbsintheUploadStandard.MixProject do
   use Mix.Project
 
   @version "0.1.0"
-  @source_url "https://github.com/donleandro/absinthe_upload_standard"
+  @source_url "https://github.com/Leandro-Moreno/absinthe_upload_standard"
 
   def project do
     [
@@ -35,8 +35,10 @@ defmodule AbsintheUploadStandard.MixProject do
     """
     A Plug that adds standard graphql-multipart-request-spec support to Absinthe.
     Drop it into your pipeline before Absinthe.Plug and standard clients
-    (Apollo, urql, Relay, Flutter) will be able to upload files. Transitional
-    package while absinthe_plug#309 gets merged upstream.
+    (Apollo, urql, Relay, Flutter) will be able to upload files. Born from
+    the Shiko project (veterinary clinic platform) where we needed reliable
+    image uploads over GraphQL. Transitional package while absinthe_plug#309
+    gets merged upstream.
     """
   end
 
@@ -45,6 +47,7 @@ defmodule AbsintheUploadStandard.MixProject do
       licenses: ["MIT"],
       links: %{
         "GitHub" => @source_url,
+        "Upstream PR" => "https://github.com/absinthe-graphql/absinthe_plug/pull/309",
         "graphql-multipart-request-spec" =>
           "https://github.com/jaydenseric/graphql-multipart-request-spec"
       }
